@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Display Request URI</title>
+    <style>
+        body { font-family: Arial, sans-serif; padding: 20px; }
+        pre { background-color: #f4f4f4; padding: 10px; border-radius: 5px; }
+    </style>
+</head>
+<body>
+    <h1>Request URI</h1>
+    <pre id="uriDisplay"></pre>
+    <script>
+        function displayURI() {
+            document.getElementById('uriDisplay').textContent = windowwindow.location.pathname
+        
+        // Display the initial URI
+        displayURI();
+
+        // Handle navigation within the app
+        window.addEventListener('popstate', function() {
+            displayURI();
+        });
+    </script>
+</body>
+</html>
